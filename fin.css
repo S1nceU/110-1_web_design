@@ -45,9 +45,11 @@
   
   .system_name{
     /*定位對齊*/
-    position:relative;   
+    font-size: small;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 650px; left: 1350px;
     margin: auto;
-    top: 100px;
     text-align:center; 
   }
   
