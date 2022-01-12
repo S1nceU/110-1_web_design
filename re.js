@@ -32,27 +32,27 @@ async function addTodo(event) {
     const username2 = document.getElementById("username2").value;
     const password2 = document.getElementById("password2").value;
     const comfirm_password = document.getElementById("comfirm_password").value;
-    await firebase.auth().createUserWithEmailAndPassword(username2, password2)
-        .then((userCredential) => {
-            // Signed in
-            var user = userCredential.user;
-            // ...
-            console.log("i want to sign up account.");
-            db.collection('user_manage').add({
-                fullname,
-                username2,
-                password2,
-                comfirm_password
-            })
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            alert("sign up error.");
-            window.location.reload();
+
+    try {
+        await firebase.auth().createUserWithEmailAndPassword(username2, password2);
+
+        console.log("i want to sign up account.");
+        await db.collection('user_manage').add({
+            fullname,
+            username2,
+            password2,
+            comfirm_password,
+            role: 0,
         });
-    console.log("test");
-    alert("sign up finish.");
-    window.location.href = "index.html";
+
+        console.log("test");
+        alert("sign up finish.");
+        window.location.href = "index.html";
+
+    } catch (error) {
+        console.log(error);
+        alert("sign up error.");
+        window.location.reload();
+    }
 
 }
