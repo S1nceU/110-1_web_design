@@ -11,7 +11,7 @@
     width: 200px;
     height: 20px;
     margin: 10px;
-    color: #df5334;
+    color: #6734df;
   }
   .opsubmi{
     margin: 20px;
@@ -33,7 +33,7 @@
     height: 300px;
     background-color: white;
     border-radius: 5px;
-    border-top: 10px solid #df5334;
+    border-top: 10px solid #7942df;
     box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
     
     /*定位對齊*/
