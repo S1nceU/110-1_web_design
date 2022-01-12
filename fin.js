@@ -51,7 +51,7 @@ async function addTodo(event) {
         await login(username);
     } catch (error) {
         console.log(error);
-        alert('你好笨');
+        alert('你真棒');
         window.location.reload();
     }
 }
