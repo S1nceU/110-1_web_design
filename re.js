@@ -38,6 +38,12 @@ async function addTodo(event) {
             var user = userCredential.user;
             // ...
             console.log("i want to sign up account.");
+            db.collection('user_manage').add({
+                fullname,
+                username2,
+                password2,
+                comfirm_password
+            })
         })
         .catch((error) => {
             var errorCode = error.code;
@@ -45,14 +51,8 @@ async function addTodo(event) {
             alert("sign up error.");
             window.location.reload();
         });
-    await db.collection('user_manage').add({
-        fullname,
-        username2,
-        password2,
-        comfirm_password
-    })
     console.log("test");
     alert("sign up finish.");
-    window.location.reload();
+    window.location.href = "index.html";
 
 }
