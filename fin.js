@@ -31,7 +31,9 @@ async function login(username) {
 }
 
 firebase.auth().onAuthStateChanged((user) => {
+    console.log(1);
     if (user) {
+        console.log(user);
         login(user.email);
     }
   });
