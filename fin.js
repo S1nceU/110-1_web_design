@@ -65,5 +65,5 @@ async function addTodo(event) {
         });
     console.log("test");
     alert("sign in finish.");
-    window.location.replace("index.html");
+    window.location.replace("game.html");
 }
