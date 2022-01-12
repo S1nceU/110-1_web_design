@@ -58,12 +58,13 @@ async function addTodo(event) {
             // Signed in
             var user = userCredential.user;
             // ...
+            console.log("test");
+            alert("sign in finish.");
+            window.location.href = "game.html";
         })
             .catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
+            window.location.reload();
         });
-    console.log("test");
-    alert("sign in finish.");
-    window.location.replace("game.html");
 }
