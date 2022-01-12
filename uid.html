@@ -16,13 +16,20 @@
           <h3>User List</h3>
           </center>
           <div>    <!--用戶stript-->
-            <button class = "submit" id = "out_sign">sign out</button><br>
-            <button class = "submit" onclick="history.back()">Back</button>
+            <button class = "submit" id = "out_sign">Sign out</button><br>
+            <button class = "submit" onclick="location.href='addmit.html'">Back</button>
             <!-- <input type="submit" value="登入" class="submit" onclick="location.href='./index.html'"> 登入後畫面 -->
           </div>
-          <ul id="listGroup" class="list-group list-group-flush">
+          <table id="listGroup" style="width:100%">
+              <tr>
+                  <th>UserMail</th>
+                  <th>Password</th>
+              </tr>
+
+          </table>
+          <!-- <ul id="listGroup" class="list-group list-group-flush">
             
-          </ul>
+          </ul> -->
           <!-- <button class = "btn btn-primary" onclick="location.href='register.html'">註冊帳號</button> -->
           
         </div><!-- login end-->

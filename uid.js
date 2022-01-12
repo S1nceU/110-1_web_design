@@ -30,9 +30,10 @@ db
         doclist.forEach(element => {
             const user = element.data();
             if(user.role===0){
-                const col = `<li>
-                            useremail : ${user.username2} password : ${user.password2}
-                        </li> `
+                const col = `<tr>
+                                <td>${user.username2}</td>
+                                <td>${user.password2}</td>
+                        </td> `
             $("#listGroup").append(col);
             }
         });
