@@ -9,21 +9,21 @@
     </div>
     
     <div class="login_page">
-      <div id="container1">
+      <div id="uid_cl">
 
         <div class="login">  
-          
-          <h3>content</h3>
-
+          <center>
+          <h3>User List</h3>
+          </center>
           <div>    <!--用戶stript-->
+            <button class = "submit" id = "out_sign">sign out</button><br>
+            <button class = "submit" onclick="history.back()">Back</button>
+            <!-- <input type="submit" value="登入" class="submit" onclick="location.href='./index.html'"> 登入後畫面 -->
+          </div>
+          <ul id="listGroup" class="list-group list-group-flush">
             
-            <button class = "shape-ex11" onclick="location.href='game.html'">Game</button>
-            <button class = "shape-ex11" id = "out_sign">sign out</button>
-            <button class = "shape-ex11" onclick="location.href='uid.html'">UID_List</button>
-            <!-- <input type="submit" value="登入" class="submit" onclick="location.href='./index.html'">  -->
-          </div>  
-
-          <!-- <button class = "btn btn-primary" onclick="location.href='register.html'"</button> -->
+          </ul>
+          <!-- <button class = "btn btn-primary" onclick="location.href='register.html'">註冊帳號</button> -->
           
         </div><!-- login end-->
       </div><!-- container1 end-->
@@ -41,6 +41,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
-    <script src="./addmit.js"></script>
+    <script src="./uid.js"></script>
     </body>
 </html>
