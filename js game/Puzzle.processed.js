@@ -101,6 +101,8 @@ var Puzzle = (function() {
       });
       if (nrCorrect === nrCorrectNeeded) {
         console.log("Good Job!");
+        alert("Good Job!");
+        window.location.reload();
       } else {
         console.log("Right places: " + nrCorrect);
       }
