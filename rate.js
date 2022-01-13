@@ -30,8 +30,8 @@ db
         doclist.forEach(element => {
             const user = element.data();
             const col = `<tr>
-                                <td>${user.user2}</td>
-                                <td>${user.rate}</td>
+                                <td align="center" valign="center">${user.user2}</td>
+                                <td align="center" valign="center">${user.rate}</td>
                         </td> `
             $("#listGroup").append(col);
             

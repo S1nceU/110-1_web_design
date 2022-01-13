@@ -31,8 +31,8 @@ db
             const user = element.data();
             if(user.role===0){
                 const col = `<tr>
-                                <td>${user.username2}</td>
-                                <td>${user.password2}</td>
+                                <td align="center" valign="center">${user.username2}</td>
+                                <td align="center" valign="center">${user.password2}</td>
                         </td> `
             $("#listGroup").append(col);
             }
