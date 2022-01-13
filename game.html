@@ -2,11 +2,12 @@
 
 <head>
     <title>aa</title>
+    <link rel="stylesheet" href="./fin.css" type="text/css">
     <style>
       button, canvas {
         position: relative;
       }
-      button {
+      .game {
         background-color: #4CAF50; /* Green */
         border: 1px,black;
         color : white;
@@ -39,16 +40,16 @@
     </style>
 </head>
 <body style="background-image: url(wallpapersden.com_little-boy-on-full-moon-night-playing-guitar-art_3840x2400.jpg);background-size: cover;">
-    <button class = "shape-ex11" onclick="history.back()">Back</button>
+    <button class = "submit" onclick="history.back()">Back</button>
     <div id="score"></div>
     <canvas id="tetris" width="240" height="400" ></canvas>
     <script src="tetris.js"></script>
     <center><div style="text-align:center;width:480px;">
-      <button onclick="start()">▶</button>
-      <button onclick="playerMove(-1)">↤</button>
-      <button onclick="playerDrop()">↧</button>
-      <button onclick="playerMove(1)">↦</button>
-      <button onclick="playerRotate(1)">↻</button>
+      <button class="game" onclick="start()">▶</button>
+      <button class="game" onclick="playerMove(-1)">↤</button>
+      <button class="game" onclick="playerDrop()">↧</button>
+      <button class="game" onclick="playerMove(1)">↦</button>
+      <button class="game" onclick="playerRotate(1)">↻</button>
       <button id = "redstyle" onclick="restart()">reset</button>
     </div></center>
     

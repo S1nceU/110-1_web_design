@@ -32,6 +32,10 @@ async function addTodo(event) {
     const username2 = document.getElementById("username2").value;
     const password2 = document.getElementById("password2").value;
     const comfirm_password = document.getElementById("comfirm_password").value;
+    if(password2 != comfirm_password){
+        alert("password is not the same.");
+        window.location.reload();
+    }
 
     try {
         await firebase.auth().createUserWithEmailAndPassword(username2, password2);
@@ -54,5 +58,4 @@ async function addTodo(event) {
         alert("sign up error.");
         window.location.reload();
     }
-
 }

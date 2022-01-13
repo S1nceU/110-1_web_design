@@ -42,7 +42,10 @@
     top: 100px;
     text-align:center;  
   }
-  
+  #container1{
+    height: 250px;
+  }
+
   .system_name{
     /*定位對齊*/
     font-size: small;
@@ -142,7 +145,7 @@
   margin: 50px;
   padding: 10px;
   width: 500px;
-  height: 400px;
+  height: 600px;
   background-color: white;
   border-radius: 5px;
   border-top: 10px solid #7942df;

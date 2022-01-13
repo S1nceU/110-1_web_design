@@ -14,11 +14,8 @@ const db = firebase.firestore();
 async function login(username) {
     const userQuery = db.collection("user_manage").where('username2', '==', username);
     const userSnapshot = await userQuery.get();
-
     const user = userSnapshot.docs[0].data();
-
     console.log(user);
-
     console.log("test");
 
     
@@ -31,7 +28,7 @@ async function login(username) {
 }
 
 firebase.auth().onAuthStateChanged((user) => {
-    console.log(1);
+    console.log("Hello console.");
     if (user) {
         console.log(user);
         login(user.email);
@@ -51,17 +48,17 @@ async function addTodo(event) {
         await login(username);
     } catch (error) {
         console.log(error);
-        alert('你真棒');
+        alert('你真棒，要好好記帳號密碼哦~~');
         window.location.reload();
     }
 }
-const SignOut = document.querySelector('#out_sign');
-SignOut.addEventListener('click',SIGNOUT);
-async function SIGNOUT(event){
-    event.preventDefault();
-    firebase.auth().signOut().then(() => {
-        // Sign-out successful.
-    }).catch((error) => {
-        // An error happened.
-    });
-}
+// const SignOut = document.querySelector('#out_sign');
+// SignOut.addEventListener('click',SIGNOUT);
+// async function SIGNOUT(event){
+//     event.preventDefault();
+//     firebase.auth().signOut().then(() => {
+//         // Sign-out successful.
+//     }).catch((error) => {
+//         // An error happened.
+//     });
+// }

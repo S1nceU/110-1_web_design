@@ -23,3 +23,35 @@ async function SIGNOUT(event){
         console.log("sign out error.");
     });
 }
+const list = db.collection("user_manage")
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        console.log("i want to do something bad.");
+        console.log(user);
+        if(user.uid === "bPOhasJCwSS7TCqHOunEgZozNaa2"){
+        }
+        else{
+            window.location.href = "index.html";
+            alert("你壞壞!!");
+        }
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        // ...
+    } else {
+        // User is signed out
+        window.location.href = "index.html";
+        alert("你壞壞!!");
+    }
+});
+// const rootuser = firebase.auth().currentUser;
+
+// console.log("i want to do something bad.");
+// if (rootuser.role === 1) {
+//     // User is signed in, see docs for a list of available properties
+//     // https://firebase.google.com/docs/reference/js/firebase.User
+//     // ...
+//   } else {
+//     // No user is signed in.
+//         alert("你壞壞");
+//         window.location.href = "index.html";
+//   }
