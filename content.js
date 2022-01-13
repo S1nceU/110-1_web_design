@@ -25,8 +25,7 @@ async function SIGNOUT(event){
 }
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/firebase.User
+
       var uid = user.uid;
       // ...
     } else {
@@ -34,3 +33,37 @@ firebase.auth().onAuthStateChanged((user) => {
       window.location.href = "index.html";
     }
   });
+
+
+
+const ratyOptions = {
+    starHalf: "https://cdnjs.cloudflare.com/ajax/libs/raty/3.1.1/images/star-half.png",
+    starOff: "https://cdnjs.cloudflare.com/ajax/libs/raty/3.1.1/images/star-off.png",
+    starOn: "https://cdnjs.cloudflare.com/ajax/libs/raty/3.1.1/images/star-on.png"
+}
+$('#rating').raty({ ...ratyOptions });
+const filmReview = db.collection('rate');
+
+$('#send').on('click', addReview);
+
+async function addReview(event) {
+  event.preventDefault();
+  const user1 = firebase.auth().currentUser;
+  const user2 = user1.email;
+  const rate = $('#rating').data('raty').score();
+  // $('div').raty({ score: 3 });
+  await filmReview.add({
+    user2,
+    rate,
+  });
+  // const filmReviewDocs = await filmReview.get();
+  // filmReviewDocs.forEach(element => {
+  //   if(element.user2 === user2){
+  //     console.log("test");
+  //     alert("你填過了哦");
+  //     window.location.reload();
+  //   }
+  // });
+  window.location.reload();
+  alert("愛妳呦~~");
+}

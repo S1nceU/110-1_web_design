@@ -38,7 +38,9 @@ async function addTodo(event) {
     }
 
     try {
-        await firebase.auth().createUserWithEmailAndPassword(username2, password2);
+        const user = await firebase.auth().createUserWithEmailAndPassword(username2, password2);
+
+        console.log(user);
 
         console.log("i want to sign up account.");
         await db.collection('user_manage').add({
@@ -51,7 +53,7 @@ async function addTodo(event) {
 
         console.log("test");
         alert("sign up finish.");
-        window.location.href = "index.html";
+        // window.location.href = "index.html";
 
     } catch (error) {
         console.log(error);
